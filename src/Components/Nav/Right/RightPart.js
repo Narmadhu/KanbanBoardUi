@@ -8,13 +8,14 @@ import Input from '@material-ui/core/Input';
 
 function RightPart() {
   return (
-    <div>
+    <div className="right-nav" >
 
         {/* <Button endIcon={<SearchIcon />}><input type="text" placeholder="search"  /></Button> */}
-        <Input placeholder="search" type="text" /><Button endIcon={<SearchIcon />} />
-        <Button startIcon={<SettingsIcon />}>Configuration</Button>
+        <span className="input-icons" ><input placeholder="search" type="text" /><SearchIcon className="icon" /></span>
+        <button><SettingsIcon className="settings" fontSize="small" /> Configuration</button>
         <span>(0-30)</span>
-        <Button endIcon={<ArrowForwardIosIcon />}  startIcon={<ArrowBackIosIcon />} />
+        <button><ArrowBackIosIcon fontSize="small" /></button>
+        <button> <ArrowForwardIosIcon fontSize="small" /></button>
     </div>
   );
 }

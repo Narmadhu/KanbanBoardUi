@@ -1,4 +1,4 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faFilter ,faAngleLeft,faAngleRight} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faFilter)
+library.add(faFilter,faAngleLeft,faAngleRight)

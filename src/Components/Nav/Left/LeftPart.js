@@ -34,7 +34,7 @@ function LeftPart() {
       <button>recently updated</button>
       {/* <button><CachedIcon fontSize="small" /></button> */}
       <button><FontAwesomeIcon icon="filter" color="black" /></button>
-      <button> <CachedIcon fontSize="small" /></button>
+      <button> <CachedIcon fontSize="small" color="black" /></button>
       </div>
     </div>
   );

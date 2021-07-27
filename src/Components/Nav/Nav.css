@@ -18,6 +18,7 @@ button{
     color: rgb(83, 83, 83);
     padding: 5px 10px;
     font-size: small;
+    letter-spacing: 0.4px;
 }
 
 /* Rightside Nav */
@@ -52,4 +53,5 @@ padding: 5px 10px;
     color: rgb(83, 83, 83);
     margin-right: 5px;
     font-size: small;
+    font-weight:600;
 }

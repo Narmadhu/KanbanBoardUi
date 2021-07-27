@@ -15,6 +15,9 @@
     width: 310px;
     overflow-y: scroll;
 }
+.grid > div:nth-child(2){
+    width: 310px;
+}
 .grid > div h3{
     text-transform: uppercase;
     font-size: small;
@@ -31,7 +34,7 @@
      padding: 1em;
      font-size: small;
      color:grey;
-     border-left:3px solid green ;
+     border-left:3px solid rgb(115, 177, 115) ;
      border-radius: 5px;
 }
 .grid-column > div:nth-child(2){
@@ -72,7 +75,8 @@ border-radius: 3px;
     align-items: center;
 }
 .last-div > p > span{
-    border: 1px solid rgb(247, 139, 157);
+    border: 1px solid rgb(172, 238, 172);
+    background-color: rgb(231, 255, 231);
     width: 25px;
     height: 25px;
     display: inline-block;

@@ -1,5 +1,6 @@
 import React from "react";
 import Received from "./Received/Received";
+import InProgress from "./InProgress/InProgress";
 import "./Tickets.css";
 
 function Tickets() {
@@ -11,6 +12,7 @@ function Tickets() {
       </div>
       <div>
         <h3>order in progress (1) </h3>
+        <InProgress />
       </div>
       <div>
         <h3>order is ready for delivery (0) </h3>

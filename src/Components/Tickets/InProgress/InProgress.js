@@ -3,6 +3,7 @@ import React from "react";
 function InProgress(props) {
   return (
     <div className="grid-column" >
+  {/* Each orders in inprogress orders box */}
     {
       props.InProgressData.map(item=>(
         <div className="each-grid">
@@ -18,6 +19,7 @@ function InProgress(props) {
       </div>
       ))
     }
+
     </div>
   );
 }

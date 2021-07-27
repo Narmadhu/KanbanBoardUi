@@ -1,9 +1,6 @@
 import React from "react";
-// import FilterIcon from "@material-ui/icons/";
 import CachedIcon from '@material-ui/icons/Cached';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Filter } from "@fortawesome/free-solid-svg-icons/faFilter";
-import "./LeftPart.css";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -32,9 +29,8 @@ function LeftPart() {
       <button style={{backgroundColor:"green",color:"white"}} >all</button>
       <button>only my tickets</button>
       <button>recently updated</button>
-      {/* <button><CachedIcon fontSize="small" /></button> */}
       <button><FontAwesomeIcon icon="filter" color="black" /></button>
-      <button> <CachedIcon fontSize="small" color="black" /></button>
+      <button> <CachedIcon fontSize="small" /></button>
       </div>
     </div>
   );

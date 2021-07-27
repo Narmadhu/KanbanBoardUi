@@ -8,6 +8,7 @@ function Tickets() {
   const [receivedData, setReceivedData] = useState([])
   const [InProgressData, setInProgressData] = useState([])
 
+  //getting dynamic data for received orders
   function getData(){
   
       fetch('data.json'
@@ -30,6 +31,7 @@ function Tickets() {
       getData()
     },[])
 
+      //getting dynamic data for orders inprogress
     function getInProgressData(){
   
       fetch('inprogress.json'

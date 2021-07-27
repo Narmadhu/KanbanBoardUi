@@ -1,19 +1,23 @@
 import React from "react";
 
-function InProgress() {
+function InProgress(props) {
   return (
     <div className="grid-column" >
-      <div className="each-grid">
-        <span>#27 <button>Response due</button></span>
-        <p className="order-no" >Order No: #45 </p>
-        <p className="order">Paratha Side Dish (2 Nos), Plain Dosa, Podi Ghee Dosa (1 Nos), Butter Roti (5 Nos)</p>
+    {
+      props.InProgressData.map(item=>(
+        <div className="each-grid">
+        <span>{item.no}<button>{item.response}</button></span>
+        <p className="order-no" >{item.orderNo}</p>
+        <p className="order">{item.order}</p>
         <div>
           <div className="last-div">
-        <span className="time" > due : jun 30,2019 3:39 pm</span>
-        <p>Assigned to <span></span></p>
+        <span className="time" >{item.time}</span>
+        <p>{item.assign}<span></span></p>
           </div>
         </div>
       </div>
+      ))
+    }
     </div>
   );
 }

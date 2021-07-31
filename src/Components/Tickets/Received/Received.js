@@ -16,8 +16,8 @@ function handleOnDragEnd(item){
     <DragDropContext onDragEnd={handleOnDragEnd}>
     <Droppable droppableId="characters" direction="vertical"  >
 
-     { (provided)=>(
-          <div className="grid-column" {...provided.droppableProps} ref={provided.innerRef} >
+     { (provide)=>(
+          <div className="grid-column" {...provide.droppableProps} ref={provide.innerRef} >
           {
             props.receivedData.map((item,index)=>(
           <Draggable key={item.id} index={index} draggableId={item.id}  >

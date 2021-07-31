@@ -10,8 +10,6 @@ function Tickets() {
   const [InProgressData, setInProgressData] = useState([])
   let values
 
-  let count = 1
-
   //getting dynamic data for received orders
   function getData(){
   
@@ -59,6 +57,9 @@ function Tickets() {
     function getNewReceivedData(newValue){
       setReceivedData(newValue)
     }
+    function getNewInProgressData(newValue){
+      setInProgressData(newValue)
+    }
   
     values =[
       {
@@ -69,7 +70,7 @@ function Tickets() {
       {
         id:"2",
         title: <h3>order in progress ({InProgressData.length}) </h3>, 
-        comp: <InProgress InProgressData={InProgressData} />
+        comp: <InProgress InProgressData={InProgressData} setInProgressData={getNewInProgressData} />
       },
       {
         id:"3",
@@ -82,11 +83,10 @@ function Tickets() {
         comp: null 
       }    
     ]
-
-    // const [grid, setGrid] = useState(values)
     
     function handleOnDragEnd(gridItem){
-      if(!gridItem.destination) return
+      console.log(gridItem);
+      if(!gridItem.destination) return     
       const gridItems = Array.from(values);
       const [reorderedGridItem] = gridItems.splice(gridItem.source.index,1);
       gridItems.splice(gridItem.destination.index,0,reorderedGridItem)
@@ -96,8 +96,8 @@ function Tickets() {
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <Droppable droppableId="tickets" direction="horizontal" >
-        {(provided)=>(
-          <div className="grid tickets" {...provided.droppableProps} ref={provided.innerRef} >
+        {(provide)=>(
+          <div className="grid tickets" {...provide.droppableProps} ref={provide.innerRef} >
           {
             values.map((value,index)=>(  
               <Draggable key={value.id} index={index} draggableId={value.id} >

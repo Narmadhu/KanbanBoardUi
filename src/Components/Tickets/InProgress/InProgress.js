@@ -6,7 +6,7 @@ function InProgress(props) {
   {/* Each orders in inprogress orders box */}
     {
       props.InProgressData.map(item=>(
-        <div className="each-grid">
+        <div className="each-grid" key={item.id}>
         <span>{item.no}<button>{item.response}</button></span>
         <p className="order-no" >{item.orderNo}</p>
         <p className="order">{item.order}</p>
